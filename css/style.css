@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Epilogue, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 70px;
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+p {
+  color: hsl(0deg, 0%, 41%);
+}
+
+body {
+  font-size: 16px;
+  background-color: hsl(0deg, 0%, 98%);
+  font-weight: 500;
+}
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 700px) {
+  header .navbar {
+    padding: 1rem;
+  }
+}
+header .left-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .left-nav .logo {
+  margin-right: 2rem;
+}
+header .left-nav .nav-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  header .left-nav .nav-options {
+    display: none;
+  }
+}
+header .left-nav .nav-options .arrow-f,
+header .left-nav .nav-options .arrow-c {
+  margin-left: 0.5rem;
+  transition: 0.5s;
+}
+header .left-nav a {
+  margin: 0 1rem;
+  position: relative;
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 600;
+}
+header .left-nav a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+header .mobile-option-btn {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  header .mobile-option-btn {
+    display: block;
+  }
+}
+header .registration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .registration a {
+  margin-right: 2rem;
+  font-weight: 600;
+}
+header .registration button {
+  padding: 0.5em 1em;
+  background-color: hsl(0deg, 0%, 98%);
+  border: 2px solid hsl(0deg, 0%, 41%);
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 600;
+  border-radius: 0.5em;
+  font-size: 16px;
+  cursor: pointer;
+}
+header .registration button:hover {
+  background-color: black;
+  color: hsl(0deg, 0%, 98%);
+}
+@media screen and (max-width: 700px) {
+  header .registration {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+}
+@media screen and (max-width: 700px) {
+  main {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
+main .text-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+main .text-area .texts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+main .text-area .texts .h1-text {
+  margin-bottom: 2rem;
+  width: 75%;
+}
+@media screen and (max-width: 700px) {
+  main .text-area .texts .h1-text {
+    width: 100%;
+  }
+}
+main .text-area .texts .para {
+  margin-bottom: 4rem;
+  width: 70%;
+}
+@media screen and (max-width: 700px) {
+  main .text-area .texts .para {
+    width: 100%;
+    line-height: 1.5rem;
+  }
+}
+main .text-area .texts .learn-more button {
+  padding: 1em 2em;
+  background-color: black;
+  border-radius: 1em;
+  border: 2px solid hsl(0deg, 0%, 8%);
+  margin-bottom: 8rem;
+  color: hsl(0deg, 0%, 98%);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+main .text-area .texts .learn-more button:hover {
+  color: hsl(0deg, 0%, 8%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+@media screen and (max-width: 700px) {
+  main .text-area .texts .learn-more {
+    margin: 0 auto;
+  }
+}
+main .text-area .bottom-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+@media screen and (max-width: 700px) {
+  main .text-area .bottom-logos {
+    width: 100%;
+  }
+  main .text-area .bottom-logos img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .text-area {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}
+main .image-area {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .image-area .desktop-hero-img {
+  width: 80%;
+}
+@media screen and (max-width: 700px) {
+  main .image-area .desktop-hero-img {
+    display: none;
+  }
+}
+main .image-area .mobile-hero-img {
+  width: 100%;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  main .image-area .mobile-hero-img {
+    display: block;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .image-area {
+    width: 100%;
+  }
+}
+
+.li {
+  display: none;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.474);
+  padding: 1rem 1.5rem;
+  line-height: 2rem;
+  margin: 1rem;
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+.li img {
+  margin-right: 0.5rem;
+}
+
+.features, .companies {
+  position: relative;
+}
+
+.features-li {
+  left: -60%;
+}
+
+.side-menu {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  position: absolute;
+  width: 70%;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  box-shadow: 0px 0px 60px rgba(20, 1, 1, 0.719);
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+.side-menu .cancle-btn {
+  text-align: right;
+}
+.side-menu ul, .side-menu a, .side-menu button {
+  margin-bottom: 1rem;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+.side-menu ul li {
+  margin: 1rem 1.5rem;
+}
+.side-menu ul li img {
+  margin-right: 0.5rem;
+}
+.side-menu .m-registration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5rem;
+}
+.side-menu .m-registration button {
+  padding: 0.5em 1em;
+  background-color: hsl(0deg, 0%, 98%);
+  border: 2px solid hsl(0deg, 0%, 41%);
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 600;
+  border-radius: 0.5em;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+.side-menu .m-registration button:hover {
+  background-color: black;
+  color: hsl(0deg, 0%, 98%);
+}
+.side-menu .down-arrow-f,
+.side-menu .down-arrow-c {
+  margin-left: 1rem;
+  transition: 0.5s;
+}
+@media screen and (max-width: 700px) {
+  .side-menu {
+    display: none;
+  }
+}
+
+.display {
+  display: block;
+}
+
+.m-display {
+  display: none;
+}
+
+.rotateC .down-arrow-c {
+  transform: rotate(180deg);
+}
+
+.rotateF .down-arrow-f {
+  transform: rotate(180deg);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=style.css.map */

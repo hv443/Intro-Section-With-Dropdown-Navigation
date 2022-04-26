@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import 'fonts';
+
+
+@mixin center($jc) {
+    display: flex;
+    align-items: center;
+    justify-content: $jc;
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Epilogue , sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $regular-font-color;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+    // display: none;
+}
+
+h1{
+    font-size: $h1-font-size-dekstop;
+
+    @media screen and (max-width:700px) {
+        font-size: $h1-font-size-mobile;
+    }
+}
+p{
+    color: $regular-font-color;
+}
+
+
+body{
+    
+    font-size: $regular-font-size;
+    background-color: $backgroud-color;
+    font-weight: 500;
+
+    @media screen and (max-width:700px) {
+        font-size: 14px;
+     }
+}
+
+
+.container{
+   @include center(flex-start);
+   flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    
+
+    @media screen and (max-width:700px) {
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+
+header{
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .navbar{
+        @include center(space-between);
+
+        @media screen and (max-width:700px) {
+            padding: 1rem;
+        }
+        
+    }
+
+    
+    .left-nav{
+        @include center(center);
+
+        .logo{
+            margin-right: 2rem;
+        }
+
+        .nav-options{
+            @include center(center);
+
+            @media screen and (max-width:700px) {
+                display: none;
+            }
+            .arrow-f,
+            .arrow-c{
+                margin-left: .5rem;
+                transition: .5s;
+            }
+        }
+
+
+        a{
+            margin: 0 1rem;
+            position: relative;
+            color: $regular-font-color;
+            font-weight: 600;
+
+            &:hover{
+                color: $dark-font-color;
+            }
+            
+        }
+       
+    }
+
+    
+
+    .mobile-option-btn{
+        display: none;
+        
+        @media screen and (max-width:700px) {
+            display: block;
+        }
+        
+    }
+
+    
+    .registration{
+        @include center(center);
+
+        a{
+            margin-right: 2rem;
+            font-weight: 600;
+        
+        }
+        button{
+            padding: .5em 1em;
+            background-color: $backgroud-color;
+            border: 2px solid $regular-font-color;
+            color: $regular-font-color;
+            font-weight: 600;
+            border-radius: .5em;
+            
+            font-size: $regular-font-size;
+            cursor: pointer;
+
+            &:hover{
+                background-color:black;
+                color: $backgroud-color;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            display: none;
+        }
+        
+    }
+
+}
+
+
+main{
+    
+    @include center(center);
+    width: 85%;
+
+    @media screen and (max-width:700px) {
+        flex-direction:column-reverse;
+        width: 100%;
+        
+    }
+
+    .text-area{
+        @include center(flex-end);
+        align-items: flex-start;
+        flex-direction: column;
+        
+
+        width: 50%;
+        height: 100%;
+
+        .texts{
+            @include center(space-between);
+        align-items: flex-start;
+        flex-direction: column;
+
+        .h1-text{
+            margin-bottom: 2rem;
+            width: 75%;
+
+            @media screen and (max-width:700px) {
+                width: 100%;
+            }
+        }
+        .para{
+            margin-bottom: 4rem;
+            width: 70%;
+
+            @media screen and (max-width:700px) {
+                width: 100%;
+                line-height: 1.5rem;
+            }
+        }
+        .learn-more{
+            button{
+                padding: 1em 2em;
+                background-color: black;
+                border-radius: 1em;
+                border:2px solid $dark-font-color;
+                margin-bottom: 8rem;
+                color: $backgroud-color;
+                
+                font-size: $regular-font-size;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover{
+                    color: $dark-font-color;
+                    background-color: $backgroud-color;
+                }
+            }
+
+            @media screen and (max-width:700px) {
+               margin: 0 auto;
+            }
+        }
+        
+        }
+
+        .bottom-logos{
+            @include center(space-between);
+            width: 80%;
+            
+            @media screen and (max-width:700px) {
+                width: 100%;
+               img{
+                   width: 20%;
+               }
+             }
+        }
+
+
+        @media screen and (max-width:700px) {
+            width: 100%;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+    }
+
+
+
+    .image-area{
+        width: 50%;
+       @include center(center);
+
+
+        .desktop-hero-img{
+            width: 80%;
+
+            @media screen and (max-width:700px) {
+                display: none;
+            }
+        }
+
+        .mobile-hero-img{
+           width: 100%;
+           display: none;
+           
+           @media screen and (max-width:700px) {
+            display: block;
+        }
+
+        }
+
+        @media screen and (max-width:700px) {
+            width: 100%;
+        }
+
+    }
+
+    
+}
+
+
+
+
+// deskstop list 
+
+.li{
+    display: none;
+    background-color:white;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.474);
+    padding:1rem 1.5rem;
+    line-height: 2rem;
+    margin: 1rem;
+    position: absolute;
+    width: max-content;
+    cursor: pointer;
+
+    img{
+        margin-right: .5rem;
+    }
+}
+
+.features,.companies{
+    position: relative;
+}
+
+.features-li{
+    left: -60%;
+}
+
+
+
+
+// mobile side bar
+
+.side-menu{
+
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    width:70%;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0px 0px 60px rgba(20, 1, 1, 0.719);
+    // backdrop-filter: blur(10px);
+
+    transform: translateX(100%);
+    transition: all .5s;
+
+    .cancle-btn{
+        text-align: right;
+    }
+    
+    ul,a,button{
+        margin-bottom: 1rem;
+        color: $regular-font-color;
+        cursor: pointer;
+    }
+
+
+
+    ul{
+        li{
+            margin: 1rem 1.5rem;
+            img{
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .m-registration{
+        @include center(center);
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5rem;
+
+        button{
+            padding: .5em 1em;
+            background-color: $backgroud-color;
+            border: 2px solid $regular-font-color;
+            color: $regular-font-color;
+            font-weight: 600;
+            border-radius: .5em;
+            
+            font-size: $regular-font-size;
+            width: 100%;
+            cursor: pointer;
+
+            &:hover{
+                background-color:black;
+                color: $backgroud-color;
+            }
+        }
+    }
+
+    .down-arrow-f,
+    .down-arrow-c{
+        margin-left: 1rem;
+        transition: .5s;
+    }
+   
+
+    @media screen and (max-width:700px) {
+       display: none;
+    }
+}
+
+
+
+
+
+// for javascript
+
+.display{
+    display: block;
+}
+
+
+.m-display{
+    display: none;
+}
+
+.rotateC{
+    .down-arrow-c
+    {
+        transform: rotate(180deg);
+    }
+}
+
+.rotateF{
+    .down-arrow-f
+    {
+        transform: rotate(180deg);
+    }
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+
+
